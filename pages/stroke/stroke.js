@@ -3,6 +3,7 @@
 Page({
     points : [],
     context : null,
+    flag : 1,
     onReady : function() {
         
         var canvasId = "cvs01";
@@ -65,7 +66,10 @@ Page({
         // });
     },
     tapCanvasMove : function(e) {
-        this.points[this.points.length - 1].push(e.touches[0]);
+        this.flag ++;
+        if(this.flag % 4 == 0) {            
+            this.points[this.points.length - 1].push(e.touches[0]);
+        }
         this.draw();
         // this.points.push(e.touches[0]);
         // this.context.lineTo(e.touches[0].pageX,e.touches[0].pageY-100);
