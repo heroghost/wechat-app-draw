@@ -1,0 +1,6 @@
+<!--stroke.wxml-->
+<view class="container log-list">
+
+  <canvas style="width:360px;height:600px;" canvas-id="cvs01" bindtap="tap1" bindtouchstart="tapCanvasStart" bindtouchend="tapCanvasEnd" bindtouchmove="tapCanvasMove"/>
+  I am a test app
+</view>
